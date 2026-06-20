@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import SkillsMarquee from "../componebts/home/SkillsMarquee";
 import { socialLinks } from "../data/contact";
 
