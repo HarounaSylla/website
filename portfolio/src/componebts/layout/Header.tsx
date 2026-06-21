@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { contactDetails } from "../../data/contact";
 
@@ -15,21 +15,8 @@ function navLinkClass(isActive: boolean) {
     : "text-base text-gray-500 transition-colors hover:text-black";
 }
 
-function mobileNavLinkClass(isActive: boolean) {
-  return isActive
-    ? "rounded-lg bg-gray-100 px-4 py-3 text-base font-medium text-black"
-    : "rounded-lg px-4 py-3 text-base text-gray-600 transition-colors hover:bg-gray-50 hover:text-black";
-}
-
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [menuOpen]);
 
   return (
     <div className="relative">
@@ -120,14 +107,14 @@ export default function Header() {
       {menuOpen && (
         <nav
           id="mobile-nav"
-          className="absolute inset-x-0 top-full z-50 border-b border-gray-200/80 bg-white/95 px-4 py-3 shadow-lg backdrop-blur-md md:hidden"
+          className="absolute inset-x-0 top-full z-50 px-4 py-4 sm:px-8 md:hidden"
         >
-          <ul className="flex flex-col gap-1">
+          <ul className="flex flex-col items-end gap-4">
             {navLinks.map(({ to, label }) => (
               <li key={to}>
                 <NavLink
                   to={to}
-                  className={({ isActive }) => mobileNavLinkClass(isActive)}
+                  className={({ isActive }) => navLinkClass(isActive)}
                   onClick={() => setMenuOpen(false)}
                 >
                   {label}
