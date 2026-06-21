@@ -36,7 +36,7 @@ export default function Home() {
     <div className="flex min-h-0 flex-1 flex-col">
       <SkillsMarquee />
 
-      <section className="flex min-h-0 flex-1 flex-col items-center justify-center px-2 py-2 text-center sm:px-4 sm:py-6">
+      <section className="mt-2 flex min-h-0 flex-1 flex-col items-center justify-center px-2 py-2 text-center sm:mt-0 sm:px-4 sm:py-6">
         <div className="relative flex items-center gap-12">
           {/* Social — left of frame (desktop) */}
           <div className="absolute top-1/2 right-full mr-8 hidden -translate-y-1/2 flex-col items-center gap-4 sm:flex">

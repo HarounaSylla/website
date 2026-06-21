@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import MobileNav from "./MobileNav";
 
 export default function Layout() {
   const { pathname } = useLocation();
   const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -20,6 +22,11 @@ export default function Layout() {
       cancelAnimationFrame(frame);
       window.removeEventListener("scroll", onScroll);
     };
+  }, [pathname]);
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => setMenuOpen(false));
+    return () => cancelAnimationFrame(frame);
   }, [pathname]);
 
   return (
@@ -55,7 +62,7 @@ export default function Layout() {
         }`}
       >
         <div className="mx-auto w-full max-w-6xl">
-          <Header />
+          <Header menuOpen={menuOpen} onMenuOpenChange={setMenuOpen} />
         </div>
       </div>
 
@@ -67,6 +74,8 @@ export default function Layout() {
             : "min-h-screen"
         }`}
       >
+        <MobileNav open={menuOpen} onNavigate={() => setMenuOpen(false)} />
+
         <main
           className={
             isHome ? "flex min-h-0 flex-1 flex-col" : "flex-1"

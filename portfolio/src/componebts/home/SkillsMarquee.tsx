@@ -28,7 +28,7 @@ function LogoStrip({ idPrefix }: LogoStripProps) {
 export default function SkillsMarquee() {
   return (
     <div
-      className="relative left-1/2 mb-2 w-screen max-w-none -translate-x-1/2 overflow-hidden border-y border-gray-200/70 bg-white/30 py-2 backdrop-blur-sm sm:mb-4 sm:py-3"
+      className="relative left-1/2 mb-4 w-screen max-w-none -translate-x-1/2 overflow-hidden border-y border-gray-200/70 bg-white/30 py-2 backdrop-blur-sm sm:mb-6 sm:py-3"
       aria-label="Skills and technologies"
     >
       <p className="pointer-events-none absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500/45 sm:text-sm">
