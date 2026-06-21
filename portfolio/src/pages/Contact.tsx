@@ -252,7 +252,7 @@ export default function Contact() {
             <ContactRow
               href={contactDetails.cvUrl}
               label="Resume"
-              value="Download CV"
+              value="Download resume"
               download
               icon={<DownloadIcon />}
             />
