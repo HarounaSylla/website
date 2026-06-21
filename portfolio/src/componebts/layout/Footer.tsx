@@ -11,7 +11,7 @@ export default function Footer({ className = "" }: { className?: string }) {
     <footer className={className}>
       {/* Logo band — grey + side fade */}
       <div
-        className="relative flex h-36 flex-col justify-between px-8 py-6"
+        className="relative flex h-28 flex-col justify-between px-4 py-4 sm:h-36 sm:px-8 sm:py-6"
         style={{
           background:
             "linear-gradient(to right, transparent 0%, #E3EFEB 12%, #E3EFEB 88%, transparent 100%)",

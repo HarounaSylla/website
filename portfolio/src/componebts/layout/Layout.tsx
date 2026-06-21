@@ -61,8 +61,10 @@ export default function Layout() {
 
       {/* Page content — offset below fixed header */}
       <div
-        className={`relative z-10 mx-auto flex max-w-6xl flex-col px-4 pt-28 ${
-          isHome ? "h-screen overflow-hidden" : "min-h-screen"
+        className={`relative z-10 mx-auto flex max-w-6xl flex-col px-4 pt-20 sm:pt-28 ${
+          isHome
+            ? "min-h-[100dvh] sm:h-screen sm:overflow-hidden"
+            : "min-h-screen"
         }`}
       >
         <main

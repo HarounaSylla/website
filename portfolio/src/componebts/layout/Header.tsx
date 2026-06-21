@@ -10,7 +10,7 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="flex shrink-0 items-center justify-between px-8 py-6">
+    <header className="flex shrink-0 items-center justify-between gap-2 px-4 py-4 sm:px-8 sm:py-6">
       <NavLink to="/" className="flex items-center gap-2">
         <span className="relative flex h-10 w-10 items-center justify-center">
           {/* Green outer arc */}
@@ -38,7 +38,7 @@ export default function Header() {
           </span>
         </span>
 
-        <span className="text-3xl font-bold italic tracking-tight text-black">
+        <span className="text-2xl font-bold italic tracking-tight text-black sm:text-3xl">
           sylla
         </span>
       </NavLink>
@@ -62,9 +62,10 @@ export default function Header() {
       <a
         href={contactDetails.cvUrl}
         download
-        className="rounded-full bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-gray-800"
+        className="shrink-0 rounded-full bg-black px-3 py-1.5 text-xs text-white transition-colors hover:bg-gray-800 sm:px-5 sm:py-2 sm:text-sm"
       >
-        Download CV
+        <span className="sm:hidden">CV</span>
+        <span className="hidden sm:inline">Download CV</span>
       </a>
     </header>
   );
