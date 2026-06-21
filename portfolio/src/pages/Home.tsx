@@ -60,7 +60,7 @@ export default function Home() {
             <div className="relative inline-block px-4 sm:px-10">
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0 rounded-t-[999px] bg-[#a8bbcf]"
+                className="pointer-events-none absolute inset-0 rounded-t-[999px] bg-[#f7f5f0]"
               />
 
               <div
@@ -68,10 +68,7 @@ export default function Home() {
                 className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-16 bg-gradient-to-t from-[#fafafa] to-transparent sm:h-24"
               />
 
-              <div
-                className="relative h-12 sm:h-24"
-                aria-hidden="true"
-              />
+              <div className="relative h-12 sm:h-24" aria-hidden="true" />
 
               <div className="relative overflow-hidden rounded-t-4xl">
                 <img

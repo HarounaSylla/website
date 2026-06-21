@@ -36,13 +36,17 @@ export default function Header({ menuOpen, onMenuOpenChange }: HeaderProps) {
         </span>
 
         <span className="text-2xl font-bold italic tracking-tight text-black sm:text-3xl">
-          sylla
+          Sylla
         </span>
       </NavLink>
 
       <nav className="hidden items-center gap-8 md:flex">
         {navLinks.map(({ to, label }) => (
-          <NavLink key={to} to={to} className={({ isActive }) => navLinkClass(isActive)}>
+          <NavLink
+            key={to}
+            to={to}
+            className={({ isActive }) => navLinkClass(isActive)}
+          >
             {label}
           </NavLink>
         ))}
