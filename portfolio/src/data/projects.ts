@@ -38,7 +38,7 @@ export const projects: Project[] = [
       "Zod",
       "Multer",
     ],
-    demoComingSoon: true,
+    demoVideo: "/videos/e-commerce-website.mp4",
   },
   {
     name: "Intelligent Distribution Panel",
