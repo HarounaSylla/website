@@ -11,15 +11,16 @@ export interface Project {
 export const projects: Project[] = [
   {
     name: "E-Commerce Website",
-    dateRange: "March 2026 – Present",
+    dateRange: "April 2026 – July 2026",
     course: "Full-Stack Web Development",
     description: [
-      "Full-stack online store built with the **MERN stack** (**MongoDB**, **Express**, **React**, **Node.js**).",
-      "**Clerk**-based authentication with **role-based access** separating customer and admin areas.",
-      "Admin product management with **CRUD**, categories, image uploads via **Cloudinary**, and product variants (sizes, colors, stock).",
-      "Backend data models for products, categories, cart, wishlist, promos, and customer addresses.",
-      "Customer storefront shell with routing for home, profile, sign-in, and sign-up.",
-      "Admin dashboard scaffold with routes for products, coupons, orders, and settings — several sections still in progress.",
+      "Built a full-stack **e-commerce platform** using **React**, **TypeScript**, and **Vite** on the frontend and **Express**, **TypeScript**, and **MongoDB**/**Mongoose** on the backend.",
+      "Integrated **Clerk** authentication with **role-based access control (RBAC)**, gating admin features separately from the customer-facing storefront.",
+      "Implemented end-to-end checkout using **Stripe Embedded Checkout**, plus a custom loyalty-points redemption system as an alternative payment method.",
+      "Built a dynamic product catalog with **server-side filtering** (category, brand, color, size) and sorting, along with **cart** and **wishlist** features supporting both guest and logged-in users.",
+      "Developed an **admin dashboard** for managing products (with multi-image upload via **Multer** and **Cloudinary**), categories, promo codes, orders, and homepage banners.",
+      "Designed a **RESTful API** with 40+ endpoints and **centralized error handling**, using **Zustand** for lightweight **state management** on the client.",
+      "Created a fully **responsive UI** with **Tailwind CSS** and **shadcn/radix-ui** components, using drawers and dialogs for cart, checkout, and order history.",
     ],
     stack: [
       "MongoDB",
